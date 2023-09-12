@@ -1,5 +1,6 @@
 import express from 'express';
-import { taskRouter } from './src/routers/routes/task.routes.js';
+import { taskRouter } from './src/routes/taskroutes.js';
+import { startDb } from './src/config/database.js';
 
 const app = express();
 
@@ -15,6 +16,6 @@ app.get('/', (req, res)=>{
 
 app.listen(port, ()=> {
 
-console.log("Server en puerto http://localhost:3000")
-startDb ()
+console.log('Server en puerto http://localhost:3000')
+startDb()
 })

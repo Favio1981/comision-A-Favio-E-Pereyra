@@ -3,7 +3,7 @@ import { Sequelize } from "sequelize";
 
 const sequelize = new Sequelize('db_task', 'root', '', {
     host: 'localhost',
-    dialect:  'mysql' /*b2' | 'snowflake' | 'oracle' */
+    dialect:  'mysql' 
   })
 
 export const startDb = async () =>{

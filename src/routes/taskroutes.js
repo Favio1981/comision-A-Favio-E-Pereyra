@@ -1,6 +1,6 @@
 import {Router} from "express";
 
-import {ctrlGetTasks} from "--/controllers/task.controllers.js";
+import {ctrlGetTasks} from "../controllers/taskcontrollers.js";
 import { ctrlCreateTask, ctrlDeleteTask, ctrlUpdateTask } from "../controllers/taskcontrollers.js";
 
 
