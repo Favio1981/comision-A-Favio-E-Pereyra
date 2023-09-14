@@ -1,31 +1,11 @@
 import { TaskModel } from "../models/Tasks.js"
 
-// const alumnos = [
-//     {
-//         nombre : "juan",
-//         apellido: "perez"
-//     },
-//     {
-//         nombre : "pedrito",
-//         apellido: "gomez"
-//     },
-//     {
-//         nombre : "maria",
-//         apellido: "lopez"
-//     },
-// ]
-
-//controlador ejemplo para mostrar la vista
-// export const ctrlEjemplo = (req, res) => {
-//     res.render('index.ejs', {title: "ahora es un titulo" , alumnos})
-// }
-
 // controlador para mostrar la vista
 export const ctrlView = async (req, res) => {
     try {
         const tasks = await TaskModel.findAll();
+        //res.render('tasks.ejs', {tasks})
         res.render('tasks.ejs', {tasks})
-
 
     } catch (error) {
         console.error(error)
